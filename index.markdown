@@ -8,9 +8,11 @@ title: Murray Consulting
 
 # Who?
 
-I'm a Software Engineer with more than 10 years of experience developing software of all kinds. From web development to backend development, I've been through PHP, Ruby, Node, MySQL, Postgres, Firebase, and even iOS development.
+I’m a Software Engineer with more than 15 years of experience developing software of all kinds. From web development to backend development, I’ve been through PHP, Ruby, Node, MySQL, Postgres, Firebase, and even iOS development.
 
-I'm very detail-focused, and I do my best to produce well tested, maintainable software that will always be an asset to you.
+I’m very detail-focused, and I do my best to produce well tested, maintainable software. Most of my career has been about creating backend and frontend applications from scratch, from architecture to deployment and production maintenance.
+
+I've maintained very large iOS applications, created various full-stack web applications in Ruby on Rails, created and maintained Single-Page Applications using Angular, and created billing systems from scratch using Ruby.
 
 # What?
 
