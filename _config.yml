@@ -19,15 +19,15 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Ian Murray
-email: consulting@ianmurray.me
+author:
+  name: Ian Murray
+  email: consulting@ianmurray.me
 description: >- # this means to ignore newlines until "baseurl:"
   I'm a Software Engineer who develops with Ruby and Node. I focus primarily on
   API development, but also develop entire systems with Ruby on Rails, and
   mobile apps using Flutter and Firebase.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ianmurray.me" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: synt4x
-github_username:  ianmurrays
 
 # Build settings
 theme: minima
@@ -36,6 +36,14 @@ plugins:
 
 minima:
   skin: dark
+  social_links:
+    - { platform: github,  user_url: "https://github.com/ianmurrays" }
+    - { platform: linkedin,  user_url: "https://linkedin.com/in/ianmurrays" }
+    - { platform: instagram, user_url: "https://instagram.com/ianmurrays" }
+
+header_pages:
+  - now.markdown
+  - contact.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
