@@ -5,7 +5,7 @@ title: Now
 
 # What I'm doing professionally
 
-Working at [QuickPay ApS][0] (part of [Unzer GmbH][1]) as an Engineering Manager since 2024, in Aarhus, Denmark.
+I'm working at [Sandbox.Ventures][4] since November 2025 as a Software Engineer, building different projects with Ruby on Rails.
 
 # What I'm doing personally
 
@@ -13,7 +13,6 @@ I have recently taken up photography, after I purchased a (used) Canon EOS 1100D
 
 *Last updated: 2024-11-19*
 
-[0]: https://www.quickpay.net
-[1]: https://www.unzer.com
 [2]: https://instagram.com/ianmurrays
 [3]: https://unsplash.com/@ianmurrays
+[4]: https://sandbox.ventures
