@@ -1,0 +1,19 @@
+- title: Web Development
+  description: >-
+    Full-stack web applications, REST APIs, billing systems, and backend
+    services. From architecture to deployment and production maintenance.
+  tags:
+    - Ruby on Rails
+    - APIs
+    - PostgreSQL
+    - Billing Systems
+
+- title: Mobile Development
+  description: >-
+    Cross-platform mobile applications for iOS and Android. Fast prototyping
+    with Firebase backends and production-grade deployments.
+  tags:
+    - Flutter
+    - Firebase
+    - iOS
+    - Android

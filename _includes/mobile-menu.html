@@ -1,0 +1,20 @@
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-bg md:hidden">
+  <div class="flex items-center justify-between px-6 py-4 border-b border-border">
+    <a href="/" class="font-display text-xl text-text no-underline">{{ site.title }}</a>
+    <button id="mobile-menu-close" class="text-muted hover:text-text transition-colors cursor-pointer" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="px-6 py-8 flex flex-col gap-6">
+    {% for page_path in site.header_pages %}
+      {% assign nav_page = site.pages | where: "path", page_path | first %}
+      {% if nav_page %}
+        <a href="{{ nav_page.url | relative_url }}" class="text-text text-lg no-underline hover:text-accent transition-colors">
+          {{ nav_page.title }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</div>

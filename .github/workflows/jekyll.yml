@@ -22,6 +22,8 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
       - name: Build
+        env:
+          JEKYLL_ENV: production
         run: |
           bundle exec jekyll build
       - name: Upload artifacts

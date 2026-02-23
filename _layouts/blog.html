@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="max-w-4xl mx-auto px-6 py-16">
+  <h1 class="font-display text-4xl mb-10">{{ page.title }}</h1>
+
+  {% if paginator.posts.size > 0 %}
+    <div class="space-y-8">
+      {% for post in paginator.posts %}
+        <article class="bg-surface border border-border rounded-xl p-6 hover:border-accent transition-colors">
+          <a href="{{ post.url | relative_url }}" class="no-underline block">
+            <h2 class="font-display text-2xl text-text mb-2">{{ post.title }}</h2>
+            <div class="flex items-center gap-4 text-muted text-sm mb-3">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+              </time>
+              {% assign words = post.content | number_of_words %}
+              {% assign minutes = words | divided_by: 200 %}
+              {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+              <span>&middot;</span>
+              <span>{{ minutes }} min read</span>
+            </div>
+            {% if post.excerpt %}
+              <p class="text-muted leading-relaxed">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+            {% endif %}
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+      <nav class="mt-12 flex justify-center gap-4 text-sm">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}" class="text-muted hover:text-accent transition-colors no-underline">
+            &larr; Newer
+          </a>
+        {% endif %}
+        <span class="text-muted">
+          Page {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}" class="text-muted hover:text-accent transition-colors no-underline">
+            Older &rarr;
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  {% else %}
+    <p class="text-muted text-lg">No posts yet. Check back soon.</p>
+  {% endif %}
+</div>

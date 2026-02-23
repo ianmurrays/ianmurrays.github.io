@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: oklch(0.15 0.01 260);
+    --color-surface: oklch(0.20 0.01 260);
+    --color-text: oklch(0.90 0.01 260);
+    --color-muted: oklch(0.60 0.01 260);
+    --color-accent: oklch(0.70 0.15 200);
+    --color-accent-hover: oklch(0.80 0.15 200);
+    --color-border: oklch(0.30 0.01 260);
+  }
+
+  [data-theme="light"] {
+    --color-bg: oklch(0.98 0.005 260);
+    --color-surface: oklch(1.00 0 0);
+    --color-text: oklch(0.15 0.01 260);
+    --color-muted: oklch(0.45 0.01 260);
+    --color-accent: oklch(0.50 0.15 200);
+    --color-accent-hover: oklch(0.40 0.15 200);
+    --color-border: oklch(0.85 0.01 260);
+  }
+}
+
+@theme {
+  --font-display: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-border: var(--color-border);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  a {
+    color: var(--color-accent);
+    &:hover {
+      color: var(--color-accent-hover);
+    }
+  }
+}
+
+@layer components {
+  .prose {
+    color: var(--color-text);
+    max-width: 65ch;
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--color-text);
+      line-height: 1.2;
+      margin-top: 2em;
+      margin-bottom: 0.75em;
+    }
+
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+
+    p {
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      &:hover {
+        color: var(--color-accent-hover);
+      }
+    }
+
+    strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    em {
+      color: var(--color-muted);
+    }
+
+    ul, ol {
+      margin-top: 1.25em;
+      margin-bottom: 1.25em;
+      padding-left: 1.5em;
+    }
+
+    ul { list-style-type: disc; }
+    ol { list-style-type: decimal; }
+
+    li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: 1em;
+      color: var(--color-muted);
+      font-style: italic;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.875em;
+      color: var(--color-accent);
+      background-color: var(--color-surface);
+      padding: 0.2em 0.4em;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      font-family: var(--font-mono);
+      font-size: 0.875em;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      padding: 1em;
+      overflow-x: auto;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+
+      code {
+        background: none;
+        padding: 0;
+        color: var(--color-text);
+      }
+    }
+
+    hr {
+      border-color: var(--color-border);
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    img {
+      border-radius: 0.5rem;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article class="max-w-4xl mx-auto px-6 py-16">
+  <header class="mb-10">
+    <h1 class="font-display text-4xl md:text-5xl mb-4">{{ page.title }}</h1>
+    <div class="flex items-center gap-4 text-muted text-sm">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% assign words = content | number_of_words %}
+      {% assign minutes = words | divided_by: 200 %}
+      {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+      <span>&middot;</span>
+      <span>{{ minutes }} min read</span>
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <nav class="mt-16 pt-8 border-t border-border flex justify-between text-sm">
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url | relative_url }}" class="text-muted hover:text-accent transition-colors no-underline">
+        &larr; {{ page.previous.title }}
+      </a>
+    {% else %}
+      <span></span>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url | relative_url }}" class="text-muted hover:text-accent transition-colors no-underline">
+        {{ page.next.title }} &rarr;
+      </a>
+    {% else %}
+      <span></span>
+    {% endif %}
+  </nav>
+</article>

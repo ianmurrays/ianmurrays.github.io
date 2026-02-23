@@ -1,12 +1,3 @@
-GIT
-  remote: https://github.com/jekyll/minima
-  revision: bf9ef989246b63536e9db61082f663f1a6d4d9ce
-  specs:
-    minima (3.0.0.dev)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -84,10 +75,15 @@ GEM
       webrick (~> 1.7)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-paginate-v2 (3.0.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-tailwind (2.1)
+      jekyll (>= 3.0, < 5.0)
+      tailwindcss-ruby
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.18.1)
@@ -143,6 +139,13 @@ GEM
       google-protobuf (~> 4.31)
     sass-embedded (1.97.3-x86_64-linux-musl)
       google-protobuf (~> 4.31)
+    tailwindcss-ruby (4.2.0)
+    tailwindcss-ruby (4.2.0-aarch64-linux-gnu)
+    tailwindcss-ruby (4.2.0-aarch64-linux-musl)
+    tailwindcss-ruby (4.2.0-arm64-darwin)
+    tailwindcss-ruby (4.2.0-x86_64-darwin)
+    tailwindcss-ruby (4.2.0-x86_64-linux-gnu)
+    tailwindcss-ruby (4.2.0-x86_64-linux-musl)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
@@ -172,7 +175,9 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.4)
   jekyll-feed (~> 0.12)
-  minima!
+  jekyll-paginate-v2
+  jekyll-seo-tag
+  jekyll-tailwind
 
 RUBY VERSION
    ruby 3.4.8p72

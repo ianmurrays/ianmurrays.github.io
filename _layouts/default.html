@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+</head>
+<body class="bg-bg text-text min-h-screen flex flex-col font-body">
+  {% include header.html %}
+  {% include mobile-menu.html %}
+
+  <main class="flex-1">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

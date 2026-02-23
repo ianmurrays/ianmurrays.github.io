@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="max-w-4xl mx-auto px-6 pt-24 pb-16">
+  <p class="font-mono text-accent text-sm tracking-widest mb-6">Ruby · Rails · Flutter</p>
+  <h1 class="font-display text-5xl md:text-6xl leading-tight mb-8">
+    {{ page.hero_heading | default: "I build software that works. And lasts." }}
+  </h1>
+  <p class="text-muted text-lg max-w-2xl mb-10">
+    {{ page.hero_text }}
+  </p>
+  <div class="flex flex-wrap gap-4">
+    <a href="/contact" class="inline-block bg-accent text-bg px-6 py-3 rounded-lg font-medium hover:bg-accent-hover transition-colors no-underline">
+      Get in touch
+    </a>
+    <a href="/blog/" class="inline-block border border-border text-text px-6 py-3 rounded-lg font-medium hover:border-accent hover:text-accent transition-colors no-underline">
+      Read the blog
+    </a>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="max-w-4xl mx-auto px-6 py-16">
+  <h2 class="font-display text-3xl mb-10">What I do</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    {% for service in site.data.services %}
+    <div class="bg-surface border border-border rounded-xl p-8">
+      <span class="font-mono text-accent text-sm">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+      <h3 class="font-display text-2xl mt-2 mb-4">{{ service.title }}</h3>
+      <p class="text-muted leading-relaxed mb-6">{{ service.description }}</p>
+      <div class="flex flex-wrap gap-2">
+        {% for tag in service.tags %}
+        <span class="text-xs font-mono text-accent bg-bg px-3 py-1 rounded-full border border-border">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- About -->
+<section class="max-w-4xl mx-auto px-6 py-16">
+  <h2 class="font-display text-3xl mb-6">About</h2>
+  <div class="text-muted text-lg leading-relaxed max-w-2xl">
+    <p>{{ page.about_text }}</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="border-t border-b border-border">
+  <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="font-display text-3xl md:text-4xl mb-6">Let's build something together</h2>
+    <p class="text-muted text-lg mb-8 max-w-xl mx-auto">
+      I work on hourly rates, negotiable and dependent on your project's needs. Let's find the right solution.
+    </p>
+    <a href="mailto:{{ site.author.email }}" class="inline-block bg-accent text-bg px-8 py-3 rounded-lg font-medium hover:bg-accent-hover transition-colors no-underline">
+      {{ site.author.email }}
+    </a>
+  </div>
+</section>
