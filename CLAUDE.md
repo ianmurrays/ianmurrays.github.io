@@ -28,7 +28,7 @@ docker run -p 4000:4000 -v $(pwd):/app jekyll-dev bundle exec jekyll serve --hos
 
 ## Architecture
 
-- **Static site generator**: Jekyll with Ruby 3.3.6
+- **Static site generator**: Jekyll 4.4 with Ruby 3.4.8
 - **Theme**: minima (from git: `https://github.com/jekyll/minima`), dark skin
 - **Deployment**: GitHub Actions (`.github/workflows/jekyll.yml`) builds and deploys on push to `master`
 - **Custom domain**: Configured via `CNAME` file (`ianmurray.me`)

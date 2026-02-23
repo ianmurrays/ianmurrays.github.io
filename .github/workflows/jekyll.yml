@@ -16,13 +16,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Ruby 3.3
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          ruby-version: '3.4'
+          bundler-cache: true
       - name: Build
         run: |
-          bundle install
           bundle exec jekyll build
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
